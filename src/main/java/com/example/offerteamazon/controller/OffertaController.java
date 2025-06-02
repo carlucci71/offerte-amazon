@@ -35,7 +35,7 @@ public class OffertaController {
         return "ricerca";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/offerte-amazon/login")
     public String login(Model model) {
         return "login";
     }

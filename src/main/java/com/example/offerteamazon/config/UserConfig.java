@@ -14,7 +14,7 @@ public class UserConfig {
         return new InMemoryUserDetailsManager(
             User.withDefaultPasswordEncoder()
                 .username("admin")
-                .password("password")
+                .password("0ffert3")
                 .roles("ADMIN")
                 .build()
         );
