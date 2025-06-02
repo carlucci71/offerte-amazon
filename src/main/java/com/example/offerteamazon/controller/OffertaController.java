@@ -35,7 +35,7 @@ public class OffertaController {
         return "ricerca";
     }
 
-    @GetMapping("/offerte/login")
+    @GetMapping("/login")
     public String login(Model model) {
         return "login";
     }
@@ -53,7 +53,7 @@ public class OffertaController {
         return "redirect:/admin";
     }
 
-    @PostMapping("/offerte/cerca")
+    @PostMapping("/cerca")
     public String cerca(@ModelAttribute Cerca cerca) {
         //repository.save(offerta);
         System.out.println(cerca);

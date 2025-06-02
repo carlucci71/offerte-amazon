@@ -7,7 +7,7 @@
 <a th:href="@{./}">Home</a>
 
 <h1>Ricerca Errori di Prezzo</h1>
-<form th:action="@{/offerte/cerca}" th:object="${cerca}" method="post">
+<form th:action="@{/offerte-amazon/cerca}" th:object="${cerca}" method="post">
     descrizione<br><input th:field="*{descrizione}" placeholder="Descrizione"/><br/>
     prezzo massimo<br><input th:field="*{prezzoMassimo}" placeholder="Prezzo massimo" type="number" step="1.00"/><br/>
     indirizzo mail<br><input th:field="*{email}" type="email" placeholder="email" /><br/>
