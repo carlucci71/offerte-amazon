@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <link rel="stylesheet" th:href="@{./styles.css}" />
     <title>Admin Offerte</title></head>
 <body>
-<a th:href="@{/}">Home</a>
+<a th:href="@{./}">Home</a>
 <h1>Inserisci nuova offerta</h1>
-<form th:action="@{/admin/add}" th:object="${offerta}" method="post">
+<form th:action="@{./admin/add}" th:object="${offerta}" method="post">
     <input th:field="*{nomeProdotto}" placeholder="Nome prodotto"/><br/>
     <input th:field="*{descrizione}" placeholder="Descrizione"/><br/>
     <input th:field="*{urlImmagine}" placeholder="URL Immagine"/><br/>
