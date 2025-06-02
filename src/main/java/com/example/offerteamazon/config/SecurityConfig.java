@@ -16,7 +16,7 @@ public class SecurityConfig {
                         .anyRequest().permitAll()
                 )
                 .formLogin(form -> form
-                        .loginPage("/login").permitAll() // Modificato per utilizzare un percorso relativo
+                        .loginPage("/offerte-amazon/login").permitAll() // Modificato per utilizzare un percorso relativo
                 )
                 .logout(logout -> logout.permitAll());
 
