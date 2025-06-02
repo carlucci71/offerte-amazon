@@ -11,14 +11,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/admin/**").authenticated()
-                .anyRequest().permitAll()
-            )
-            .formLogin(form -> form
-                .loginPage("login").permitAll()
-            )
-            .logout(logout -> logout.permitAll());
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/admin/**").authenticated()
+                        .anyRequest().permitAll()
+                )
+                .formLogin(form -> form
+                        .loginPage("/login").permitAll() // Modificato per utilizzare un percorso relativo
+                )
+                .logout(logout -> logout.permitAll());
 
         return http.build();
     }
