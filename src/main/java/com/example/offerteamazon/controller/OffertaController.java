@@ -53,7 +53,7 @@ public class OffertaController {
         return "redirect:/admin";
     }
 
-    @PostMapping("/cerca")
+    @PostMapping("/offerte/cerca")
     public String cerca(@ModelAttribute Cerca cerca) {
         //repository.save(offerta);
         System.out.println(cerca);
