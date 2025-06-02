@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <title>Offerte Amazon</title></head>
+<body>
+<a th:href="@{/}">Home</a>
+
+<h1>Ricerca Errori di Prezzo</h1>
+<form th:action="@{/cerca}" th:object="${cerca}" method="post">
+    descrizione<br><input th:field="*{descrizione}" placeholder="Descrizione"/><br/>
+    prezzo massimo<br><input th:field="*{prezzoMassimo}" placeholder="Prezzo massimo" type="number" step="1.00"/><br/>
+    indirizzo mail<br><input th:field="*{email}" type="email" placeholder="email" /><br/>
+    account telegram<br><input th:field="*{telegram}" placeholder="telegram" /><br/>
+    <button type="submit">Salva</button>
+    N.B. Al momento il sito non salva le ricerche, a breve verrà data la possibilità di registrarsi e schedulare le ricerche
+</form>
+</body>
+</html>

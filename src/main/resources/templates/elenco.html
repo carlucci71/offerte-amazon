@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <title>Offerte Amazon</title></head>
+<body>
+<a th:href="@{/}">Home</a>
+
+<h1>Offerte con Errori di Prezzo</h1>
+<ul>
+    <li th:each="offerta : ${offerte}">
+        <img th:src="${offerta.urlImmagine}" width="100" />
+        <p><strong th:text="${offerta.nomeProdotto}"></strong></p>
+        <p th:text="${offerta.descrizione}"></p>
+        <p>Prezzo: <s th:text="${offerta.prezzoOriginale}"></s> <b th:text="${offerta.prezzoSegnalato}"></b></p>
+        <a th:href="${offerta.urlAffiliato}" target="_blank">Vai su Amazon</a>
+    </li>
+</ul>
+</body>
+</html>
