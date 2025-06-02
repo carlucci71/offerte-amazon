@@ -57,7 +57,7 @@ public class OffertaController {
     public String cerca(@ModelAttribute Cerca cerca) {
         //repository.save(offerta);
         System.out.println(cerca);
-        return "redirect:/offerte-amazon";
+        return "redirect:/offerte";
     }
 
     @GetMapping("/admin/delete/{id}")
