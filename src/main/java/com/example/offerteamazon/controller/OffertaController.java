@@ -3,10 +3,15 @@ package com.example.offerteamazon.controller;
 import com.example.offerteamazon.model.Cerca;
 import com.example.offerteamazon.model.OffertaAmazon;
 import com.example.offerteamazon.repository.OffertaAmazonRepository;
+import com.example.offerteamazon.telegram.OfferteBOT;
+import com.fasterxml.jackson.annotation.OptBoolean;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class OffertaController {
@@ -65,4 +70,8 @@ public class OffertaController {
         repository.deleteById(id);
         return "redirect:/admin";
     }
+
+    @Autowired
+    OfferteBOT offerteBOT;
+
 }
